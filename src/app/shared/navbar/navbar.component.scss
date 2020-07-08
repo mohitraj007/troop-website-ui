@@ -1,0 +1,15 @@
+::ng-deep {
+    .navbar-nav.mr-auto .dropdown-menu:before, .navbar-nav.mr-auto .dropdown-menu:after, .navbar-nav.ml-auto .dropdown-menu:before, .navbar-nav.ml-auto .dropdown-menu:after {
+        left: auto !important;
+    }
+}
+
+::ng-deep {
+    .navbar .navbar-collapse .nav-item .dropdown-item i {
+        margin: 0 10px;
+        margin: 0 10px 0px 5px;
+        font-size: 18px;
+        position: relative;
+        top: 1px;
+    }
+}

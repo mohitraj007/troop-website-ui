@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="https://310troopkarnataka.com">310 Troop Karnataka</a>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse"
+                data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom"
+                        href="https://www.facebook.com/groups/377262336034948/" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                        <p class="d-lg-none">Facebook</p>
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom"
+                        href="https://www.instagram.com/rr310ownerskarnataka/" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                        <p class="d-lg-none">Instagram</p>
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="!isHome()">
+                    <a [routerLink]="['/home']" class="nav-link"><i class="fa fa-home"></i></a>
+                </li>
+                <li class="nav-item ">
+                    <div ngbDropdown class="dropdown" placement="bottom-left">
+                        <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>
+                            <i class="nc-icon nc-settings-gear-65" aria-hidden="true"></i>
+                        </a>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1"
+                            class="dropdown-danger dropdown-menu-right">
+                            <a [routerLink]="['/login']" class="dropdown-item"><i class="fa fa-sign-in"></i>Login</a>
+                            <a [routerLink]="['/signup']" class="dropdown-item"><i class="fa fa-user-plus"></i>Sign Up</a>
+                            <a [routerLink]="['/landing']" class="dropdown-item"><i class="fa fa-home"></i>Landing Page</a>
+                            <a [routerLink]="['/user-profile']" class="dropdown-item"><i class="fa fa-home"></i>User Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a [routerLink]="['/logout']" class="dropdown-item"><i class="fa fa-sign-out"></i>Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
